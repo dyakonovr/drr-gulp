@@ -1,0 +1,18 @@
+// Стили для любой страницы
+
+@import "./default/vars";
+@import "./default/mixins";
+@import "./default/fonts";
+@import "./default/vendor";
+@import "./default/settings";
+@import "./default/universal";
+
+// Компоненты страницы
+
+@import "./components/header";
+@import "./components/footer";
+
+.header {
+  display: block;
+  font-size: 12px;
+}
