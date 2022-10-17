@@ -5,7 +5,7 @@ import babel from 'gulp-babel';
 const entries = dynamicEntryPoints({
   entryFolder: './src/js',
   options: {
-    ignore: ['./src/js/components/*.js', './src/js/vendor/*.js', './src/js/functions/*.js']
+    ignore: ['./src/js/components/*.js', './src/js/vendor/*.js', './src/js/functions/*.js', './src/js/default/*.js']
   }
 });
 
