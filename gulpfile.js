@@ -31,6 +31,7 @@ function watcher() {
   gulp.watch(path.watch.scss, scss);
   gulp.watch(path.watch.js, js);
   gulp.watch(path.watch.resources, resources);
+  gulp.watch(path.watch.images, images);
 }
 
 
