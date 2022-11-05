@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@include('partials/head.html', {
+@include('partials/universal/head.html', {
 "stylesFileName": "style",
 "scriptsFileName": "index",
 "title": "Document"
 })
 
 <body>
-  @include('partials/header.html')
+  @include('partials/universal/preloader.html')
+  @include('partials/universal/header.html')
   <main class="main">
-    <img src="./img/images.jpg" alt="">
-    <img src="./img/svg/icon-tg.svg" alt="" style="width: 50px; height: 50px;">
-
+    <img src="./img/images.jpg" alt="" style="font-size: 0;" />
+    <img src="./img/svg/icon-tg.svg" alt="" style="width: 50px; height: 50px;" />
+    @include('partials/index/component.html')
   </main>
-  @include('partials/footer.html')
+  @include('partials/universal/footer.html')
 </body>
 
 </html>

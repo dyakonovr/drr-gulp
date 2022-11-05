@@ -9,5 +9,7 @@
 
 // Компоненты страницы
 
-@import "./components/header";
-@import "./components/footer";
+@import "./components/universal/preloader";
+@import "./components/universal/header";
+@import "./components/index/component";
+@import "./components/universal/footer";
