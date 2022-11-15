@@ -44,7 +44,7 @@
     "stylelint-declaration-block-no-ignored-properties": "^2.5.0",
     "stylelint-order": "^5.0.0",
     "stylelint-scss": "^4.3.0",
-    "webp-converter": "^2.2.3",
+    "webp-converter": "2.2.3",
     "webpack": "^5.74.0",
     "webpack-stream": "^7.0.0"
   }
