@@ -12,6 +12,7 @@ export const html = () => {
     }))
     .pipe(typograf({ locale: ['ru', 'en-US'] }))
     .pipe(app.plugins.replace(/@img\//g, 'img/'))
+    .pipe(app.plugins.replace(/@svg\//g, 'img/svg/'))
     .pipe(app.plugins.if(app.isBuild, webpHtmlNosvg()))
     .pipe(
       app.plugins.if(app.isBuild, versionNumber({
