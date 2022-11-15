@@ -30,7 +30,7 @@ export const path = {
     scss: `${srcFolder}/scss/**/*.scss`,
     js: `${srcFolder}/js/**/*.js`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,ico,svg}`,
-    resources: `${buildFolder}/resources/**/*.*`,
+    resources: `${srcFolder}/resources/**/*.*`,
     files: `${srcFolder}/files/**/*.*`,
   },
   clean: buildFolder,
