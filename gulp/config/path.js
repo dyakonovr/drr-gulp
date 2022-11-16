@@ -14,7 +14,6 @@ export const path = {
     images: `${buildFolder}/img/`,
     svg: `${buildFolder}/img/svg/`,
     resources: `${buildFolder}/resources/`,
-    files: `${buildFolder}/files/`,
   },
   src: {
     html: `${srcFolder}/*.html`,
@@ -23,7 +22,6 @@ export const path = {
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/img/svg/*.svg`,
     resources: `${srcFolder}/resources/**/*.*`,
-    files: `${srcFolder}/files/**/*.*`,
   },
   watch: {
     html: `${srcFolder}/**/*.html`,
@@ -31,7 +29,6 @@ export const path = {
     js: `${srcFolder}/js/**/*.js`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,ico,svg}`,
     resources: `${srcFolder}/resources/**/*.*`,
-    files: `${srcFolder}/files/**/*.*`,
   },
   clean: buildFolder,
   buildFolder: `./dist`,

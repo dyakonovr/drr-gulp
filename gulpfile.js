@@ -6,7 +6,6 @@ import { path } from './gulp/config/path.js';
 import { plugins } from './gulp/config/plugins.js';
 
 // Импорт задач
-import { copy } from './gulp/tasks/copy.js';
 import { reset } from './gulp/tasks/reset.js';
 import { html } from './gulp/tasks/html.js';
 import { server } from './gulp/tasks/server.js';
@@ -26,8 +25,7 @@ global.app = {
 
 // Наблюдатель за изменениями
 function watcher() {
-  gulp.watch(path.watch.files, copy); // (путь, задача)
-  gulp.watch(path.watch.html, html);
+  gulp.watch(path.watch.html, html); // (путь, задача)
   gulp.watch(path.watch.scss, scss);
   gulp.watch(path.watch.js, js);
   gulp.watch(path.watch.resources, resources);
@@ -36,7 +34,7 @@ function watcher() {
 
 
 // Построение сценариев выполнения задач
-const mainTasks = gulp.parallel(copy, html, scss, js, images, resources);
+const mainTasks = gulp.parallel(html, scss, js, images, resources);
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
