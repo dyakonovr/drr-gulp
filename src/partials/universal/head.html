@@ -3,7 +3,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>@title</title>
-  <link rel="stylesheet" href="css/@stylesFileName.min.css">
-  <script src="js/@scriptsFileName.min.js" defer></script>
-  @include('./favicon.html')
+  @@for (var i = 0; i < font_urls.length; i++) { <link rel="preload" href="fonts/@font_urls[i]" as="font" type="font/woff2"
+    crossorigin>
+    }
+    <link rel="stylesheet" href="css/@stylesFileName.min.css">
+    <script src="js/@scriptsFileName.min.js" defer></script>
+    @include('./favicon.html')
 </head>
