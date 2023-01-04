@@ -1,6 +1,6 @@
 
 
-export const mobileCheck = () => {
+export default function mobileCheck() {
   const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
   if (/android/i.test(userAgent)) {

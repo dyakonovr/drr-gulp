@@ -1,4 +1,4 @@
-export const disableScroll = () => {
+export default function disableScroll () {
   const pagePosition = window.scrollY;
   const paddingOffset = `${(window.innerWidth - document.body.offsetWidth)}px`;
 

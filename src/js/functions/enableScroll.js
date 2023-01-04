@@ -1,4 +1,4 @@
-export const enableScroll = () => {
+export default function enableScroll () {
   const pagePosition = parseInt(document.body.dataset.position, 10);
   document.body.style.paddingRight = '0px';
 

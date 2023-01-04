@@ -2,11 +2,11 @@
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 
 // Определение операционной системы на мобильных
-// import { mobileCheck } from "../functions/mobile-check";
+// import { mobileCheck } from "../functions/mobileCheck";
 // console.log(mobileCheck())
 
 // Определение ширины экрана
-// import { isMobile, isTablet, isDesktop } from '../functions/check-viewport';
+// import { isMobile, isTablet, isDesktop } from '../functions/checkViewport';
 // if (isDesktop()) {
 //   console.log('...')
 // }
@@ -15,15 +15,15 @@
 // import { burger } from '../functions/burger';
 
 // Реализация остановки скролла (не забудьте вызвать функцию)
-// import { disableScroll } from '../functions/disable-scroll';
+// import { disableScroll } from '../functions/disableScroll';
 
 // Реализация включения скролла (не забудьте вызвать функцию)
-// import { enableScroll } from '../functions/enable-scroll';
+// import { enableScroll } from '../functions/enableScroll';
 
 // Получение высоты шапки сайта (не забудьте вызвать функцию)
-// import { getHeaderHeight } from '../functions/header-height';
+// import { getHeaderHeight } from '../functions/headerHeight';
 
-// import { validateForms } from '../functions/validate-forms';
+// import { validateForms } from '../functions/validateForms';
 // const rules1 = [...];
 // const afterForm = () => {
 //   console.log('Произошла отправка, тут можно писать любые действия');
