@@ -49,7 +49,10 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "css-loader": "^6.7.3",
     "inputmask": "^5.0.7",
-    "just-validate": "^4.0.1"
+    "just-validate": "^4.0.1",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1"
   }
 }
