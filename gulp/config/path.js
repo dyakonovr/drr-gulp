@@ -14,6 +14,7 @@ export const path = {
     images: `${buildFolder}/img/`,
     svg: `${buildFolder}/img/svg/`,
     resources: `${buildFolder}/resources/`,
+    fonts: `${buildFolder}/resources/fonts/`
   },
   src: {
     html: `${srcFolder}/*.html`,
@@ -21,14 +22,16 @@ export const path = {
     js: `${srcFolder}/js/*.js`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/img/svg/*.svg`,
-    resources: `${srcFolder}/resources/**/*.*`,
+    resources: [`${srcFolder}/resources/**/*.*`, `!${srcFolder}/resources/fonts/**`], // все остальные файлы, но не шрифты
+    fonts: `${srcFolder}/resources/fonts/*.*`,
   },
   watch: {
     html: `${srcFolder}/**/*.html`,
     scss: `${srcFolder}/scss/**/*.scss`,
     js: `${srcFolder}/js/**/*.js`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,ico,svg}`,
-    resources: `${srcFolder}/resources/**/*.*`,
+    resources: [`${srcFolder}/resources/**/*.*`, `!${srcFolder}/resources/fonts/**`],
+    fonts: `${srcFolder}/resources/fonts/*.*`,
   },
   clean: buildFolder,
   buildFolder: `./dist`,

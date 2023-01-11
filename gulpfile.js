@@ -13,6 +13,7 @@ import { scss } from './gulp/tasks/scss.js';
 import { js } from './gulp/tasks/javascript.js';
 import { images } from './gulp/tasks/images.js';
 import { resources } from './gulp/tasks/resources.js';
+import { fonts } from './gulp/tasks/fonts.js';
 import { zip } from './gulp/tasks/zip.js';
 
 // Передаем значения в глобальную переменную
@@ -29,12 +30,13 @@ function watcher() {
   gulp.watch(path.watch.scss, scss);
   gulp.watch(path.watch.js, js);
   gulp.watch(path.watch.resources, resources);
+  gulp.watch(path.watch.fonts, fonts);
   gulp.watch(path.watch.images, images);
 }
 
 
 // Построение сценариев выполнения задач
-const mainTasks = gulp.parallel(html, scss, js, images, resources);
+const mainTasks = gulp.parallel(html, scss, js, images, resources, fonts);
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
