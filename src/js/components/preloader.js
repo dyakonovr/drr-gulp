@@ -1,5 +1,5 @@
-import disableScroll from '../../functions/disableScroll.js';
-import enableScroll from '../../functions/enableScroll.js';
+import disableScroll from '../functions/disableScroll.js';
+import enableScroll from '../functions/enableScroll.js';
 
 const preloader = document.querySelector('.preloader');
 const images = document.images;

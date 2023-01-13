@@ -4,5 +4,5 @@
 
 import "./default/_vendor.js";
 
-import "./components/universal/preloader.js";
-import "./components/index/component.js";
+import "./components/preloader.js";
+import "./components/component.js";
