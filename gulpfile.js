@@ -12,6 +12,7 @@ import { server } from './gulp/tasks/server.js';
 import { scss } from './gulp/tasks/scss.js';
 import { js } from './gulp/tasks/javascript.js';
 import { images } from './gulp/tasks/images.js';
+import { svg } from './gulp/tasks/svg.js';
 import { resources } from './gulp/tasks/resources.js';
 import { fonts } from './gulp/tasks/fonts.js';
 import { zip } from './gulp/tasks/zip.js';
@@ -36,7 +37,7 @@ function watcher() {
 
 
 // Построение сценариев выполнения задач
-const mainTasks = gulp.parallel(html, scss, js, images, resources, fonts);
+const mainTasks = gulp.parallel(html, scss, js, images, resources, fonts, svg);
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
