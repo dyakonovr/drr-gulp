@@ -13,6 +13,10 @@ export const html = () => {
     }))
     .pipe(app.plugins.replace(/@img\//g, 'img/'))
     .pipe(app.plugins.replace(/@svg\//g, 'img/svg/'))
+    .pipe(app.plugins.replace(/@css\//g, './css/'))
+    .pipe(app.plugins.replace(/@js\//g, './js/'))
+    .pipe(app.plugins.replace(/@fonts\//g, './resources/fonts/'))
+    .pipe(app.plugins.replace(/@favicon\//g, './resources/favicon/'))
     // Раскоментировать, если нужен формат фото .webp
     // .pipe(app.plugins.if(app.isBuild, webpHtmlNosvg()))
     .pipe(
