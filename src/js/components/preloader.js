@@ -29,7 +29,7 @@ if (preloader) {
       setTimeout(function () {
         if (!preloader.classList.contains('preloader__done')) {
           preloader.classList.add('preloader__done');
-          enableScroll();
+          setTimeout(enableScroll, 70);
         }
       }, 1200)
     }
