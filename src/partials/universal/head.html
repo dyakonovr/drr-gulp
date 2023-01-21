@@ -3,7 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>@title</title>
-  <link rel="preload" href="@preloader_img_url" as="image">
+  @if(preloader_img_url) {<link rel="preload" href="@preloader_img_url" as="image">}
   @for (var i = 0; i < font_urls.length; i++) { <link rel="preload" href='resources/fonts/`+font_urls[i]+`.woff2'
     as="font" type="font/woff2" crossorigin>
     }
