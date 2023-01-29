@@ -12,16 +12,18 @@ if (preloader) {
 
   disableScroll();
 
-  for (let i = 0; i < imagesTotal; i++) {
-    let imageClone = new Image();
-    imageClone.onload = imageLoaded;
-    imageClone.onerror = imageLoaded;
-    imageClone.src = images[i].src;
-  }
+  if (imagesTotal > 0) { // Если нашлась хотя бы одна картинка
+    for (let i = 0; i < imagesTotal; i++) {
+      let imageClone = new Image();
+      imageClone.onload = imageLoaded;
+      imageClone.onerror = imageLoaded;
+      imageClone.src = images[i].src;
+    }
+  } else imageLoaded(); // Иначе запускаем "холостой ход"
 
   function imageLoaded() {
     imagesLoaded++;
-    let percent = (((100 / imagesTotal) * imagesLoaded) << 0);
+    let percent = (((100 / (imagesTotal || 1)) * imagesLoaded) << 0);
     percentDisplay.innerHTML = percent + '%';
     progressDisplay.style.width = percent + '%';
 
