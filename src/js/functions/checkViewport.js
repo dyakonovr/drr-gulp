@@ -1,5 +1,7 @@
+import vars from '../default/_vars';
+
 export const isMobile = () => {
-  if (window.innerWidth < 768) {
+  if (window.innerWidth <= vars.breakpoints.smallTablet) {
     return true;
   }
 
@@ -7,7 +9,7 @@ export const isMobile = () => {
 };
 
 export const isTablet = () => {
-  if (window.innerWidth >= 769 && window.innerWidth <= 1024) {
+  if (window.innerWidth > vars.breakpoints.smallTablet && window.innerWidth <= vars.breakpoints.tablet) {
     return true;
   }
 
@@ -15,7 +17,7 @@ export const isTablet = () => {
 };
 
 export const isDesktop = () => {
-  if (window.innerWidth > 1025) {
+  if (window.innerWidth > vars.breakpoints.tablet) {
     return true;
   }
 
