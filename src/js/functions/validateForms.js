@@ -1,5 +1,5 @@
 import JustValidate from 'just-validate';
-import Inputmask from "inputmask";
+import Inputmask from "inputmask/bundle.js";
 
 export default function validateForms (selector, rules, afterSend) {
   const form = document?.querySelector(selector);
@@ -56,7 +56,7 @@ export default function validateForms (selector, rules, afterSend) {
       }
     }
 
-    xhr.open('POST', 'mail.php', true);
+    xhr.open('POST', './resources/mail.php', true);
     xhr.send(formData);
 
     ev.target.reset();
