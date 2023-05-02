@@ -1,3 +1,9 @@
-.element {
-  color: rgb(125 0 0);
+.hero {
+  @include size(150px, 250px);
+
+  position: relative;
+
+  .burger {
+    @include burger(30px, 30px, 2px, red);
+  }
 }

@@ -42,13 +42,16 @@ const mainTasks = gulp.parallel(html, scss, js, images, resources, fonts, svg);
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
 const buildZip = gulp.series(reset, mainTasks, zip);
+const backend = gulp.series(reset, mainTasks);
 
 // Экспорт сценариев
 export { dev }
 export { build }
 export { buildZip }
+export { backend }
 
 // Выполнение сценариев
 gulp.task('default', dev); // gulp
 gulp.task('build', build); // gulp build --build
 gulp.task('buildZip', buildZip); // gulp buildZip --build
+gulp.task('backend', backend); // gulp backend
