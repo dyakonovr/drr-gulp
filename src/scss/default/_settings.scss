@@ -1,7 +1,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html,
@@ -108,8 +108,4 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
-}
-
-body, *{
-  box-sizing: border-box;
 }
